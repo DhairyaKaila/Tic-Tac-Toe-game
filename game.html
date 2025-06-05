@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0 || X Game</title>
+    <link rel="stylesheet" href="game.css">
+  </head>
+  <body>
+
+    <div id="player-name">
+      <div class="card">
+        <span class="card__title">0 || X Game</span>
+        <p class="card__content">Enter player name
+        </p>
+        <div class="card__form">
+          <input placeholder="Player 1 name" type="text" id="player1">
+          <input placeholder="Player 2 name" type="text" id="player2">
+          <button class="sign-up" onclick="playerDetail()">Let's Play</button>
+        </div>
+      </div>
+    </div>
+
+    <main id="game-main">
+      <div class="display-score">
+        <h1 style="font-size: 40px; font-weight: 400;">Win</h1>
+        <div class="player1-SC">
+          <h4>player 1</h4>
+          <h3 id="player1-SC"></h3>
+        </div>
+        <div class="player2-SC">
+          <h4>player 2</h4>
+          <h3 id="player2-SC"></h3>
+        </div>
+        <div class="player2-SC">
+          <h3 id="Draw"></h3>
+        </div>
+        <button onclick="
+        localStorage.removeItem('player');
+        location.reload();
+">Close and Restart</button>
+      </div>
+      <div class="display-game">
+        <h1 id="title">0 || X Game</h1>
+        <div id="game"></div>
+        <div id="status"></div>
+        <button id="replay" onclick="resetGame()">Replay</button>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
